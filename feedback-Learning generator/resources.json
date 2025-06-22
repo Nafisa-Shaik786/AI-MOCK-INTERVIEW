@@ -1,0 +1,34 @@
+{
+  "OOP in Java": {
+    "linkedin": "https://www.linkedin.com/learning/java-object-oriented-programming",
+    "youtube": "https://www.youtube.com/playlist?list=PLsyeobzWxl7oZ-fx-4LRm8G8nT2TzqntA"
+  },
+  "SQL Joins": {
+    "linkedin": "https://www.linkedin.com/learning/learning-sql-joins",
+    "youtube": "https://www.youtube.com/playlist?list=PLUDwpEzHYYLv4gqGQIoTL2xGe3KjCz4Vq"
+  },
+  "DSA Basics": {
+    "linkedin": "https://www.linkedin.com/learning/data-structures-and-algorithms-in-java",
+    "youtube": "https://www.youtube.com/playlist?list=PLqM7alHXFySF9tVQpP4Gg3b8xz3sl0n4L"
+  },
+  "DBMS": {
+    "linkedin": "https://www.linkedin.com/learning/database-foundations-core-concepts",
+    "youtube": "https://www.youtube.com/playlist?list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_"
+  },
+  "Operating Systems": {
+    "linkedin": "https://www.linkedin.com/learning/introduction-to-operating-systems",
+    "youtube": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRjVZ1ysvF8cBKz4nFFkCjHT"
+  },
+  "Computer Networks": {
+    "linkedin": "https://www.linkedin.com/learning/computer-networking-basics",
+    "youtube": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRjD1JHKn5kjzF4k4FYL1iOa"
+  },
+  "CN Protocols": {
+    "linkedin": "https://www.linkedin.com/learning/network-protocols",
+    "youtube": "https://www.youtube.com/playlist?list=PLV8vIYTIdSna2lzwB5nYwN65vHb2e5MZz"
+  },
+  "Software Engineering": {
+    "linkedin": "https://www.linkedin.com/learning/software-engineering-fundamentals",
+    "youtube": "https://www.youtube.com/playlist?list=PL9FuOtXibFjUZbnIBu1umcsy5K_Y0FgND"
+  }
+}
