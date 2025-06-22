@@ -4,6 +4,8 @@ from PyPDF2 import PdfReader
 import google.generativeai as genai
 import io
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI()
 
@@ -15,8 +17,11 @@ app.add_middleware(
 )
 
 # Set your Gemini API key as an environment variable or paste it here
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDLolTBc7qX4m9S3N30G2zs2RG4E9Xs2d8")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if not GEMINI_API_KEY:
+    raise ValueError("GEMINI_API_KEY environment variable not set")
 genai.configure(api_key=GEMINI_API_KEY)
+
 
 def extract_text(file_bytes):
     reader = PdfReader(io.BytesIO(file_bytes))
@@ -28,12 +33,14 @@ async def generate_questions(file: UploadFile = File(...)):
     resume_text = extract_text(content)
     if not resume_text:
         return {"error": "No text found in PDF."}
-    prompt = f"Generate 5 technical interview questions based on this resume:\n\n{resume_text}"
+    prompt = f"Generate 5 technical interview questions based on this resume. Only return the questions as a numbered list, nothing else:\n\n{resume_text}"
 
     try:
         model = genai.GenerativeModel("gemini-2.5-flash")
         response = model.generate_content(prompt)
-        questions = response.text
+        questions_text = response.text.strip()
+        # Split by lines and filter out empty lines
+        questions = [q.lstrip("1234567890. ").strip() for q in questions_text.split("\n") if q.strip()]
         return {"questions": questions}
     except Exception as e:
         return {"error": str(e)}
