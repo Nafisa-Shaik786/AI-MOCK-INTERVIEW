@@ -1,9 +1,0 @@
-fastapi
-uvicorn
-pydantic
-requests
-python-multipart
-whisper
-torch
-google-generativeai
-python-dotenv
