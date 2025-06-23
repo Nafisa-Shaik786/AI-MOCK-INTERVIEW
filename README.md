@@ -1,93 +1,56 @@
 AI Mock Interview
-An AI-powered mock interview platform designed to simulate real interview scenarios, generate personalized questions, and give performance-based feedback. Built with Next.js, Tailwind CSS, PostgreSQL, and Gemini API.
+   --An AI-powered mock interview platform that simulates real interview scenarios, generates personalized questions, and gives performance-based feedback.
 
-🚀 Features
-🎤 AI Interview Simulation — Real-time question generation and evaluation using Gemini API
+Key Features
+  --AI-generated questions based on job role, experience, and tech stack.
 
-👩‍💻 Role & Stack-Based Interviews — Customize by job role, experience, and tech stack
+  --Real-time answer evaluation using Gemini API.
 
-🧾 Score & Feedback Analysis — Get detailed scores: correctness, communication, confidence
+  --Customizable interview settings (job role, experience level, tech stack).
 
-🔁 Interview History — View past sessions with full feedback reports
+  --Detailed feedback on correctness, communication, and confidence.
 
-📊 Voice Analysis — Integrates energy and pitch analysis for better feedback (Librosa)
+  --Interview history with complete feedback reports.
 
-🛠 Tech Stack
-Layer	Tech
-Frontend	Next.js, Tailwind CSS
-Backend/API	Node.js, Express, Gemini API, Flask (voice scoring)
-Database	PostgreSQL via Drizzle ORM
-AI Models	Gemini for Q&A, Mixtral (HuggingFace) for scoring
-Voice	Python (Flask), Librosa, Whisper, SpeechRecognition
+  --Voice-based interviews supported with pitch and energy analysis using Librosa.
 
-🗂 Project Structure
-graphql
-Copy
-Edit
-AI-MOCK-INTERVIEW/
-│
-├── app/                     # Next.js App Router pages & layouts
-│   ├── interview/           # Interview flow UI
-│   └── dashboard/           # User dashboard with history
-│
-├── components/              # Reusable UI components
-│   ├── InterviewPanel.tsx
-│   └── FeedbackCard.tsx
-│
-├── controllers/             # Backend logic (Node.js/Express)
-│   └── dsacontroller.js     # DSA code submission & feedback logic
-│
-├── dsa/                     # DSA question bank (JSON)
-│   └── dsaquestions.json
-│
-├── lib/                     # Drizzle ORM & DB config
-│   └── db.ts
-│
-├── public/                  # Static assets (icons, images)
-│
-├── routes/                  # Express routes for DSA & interview
-│   └── dsaRoutes.js
-│
-├── utils/                   # Helper functions (prompts, scoring)
-│   └── promptUtils.ts
-│
-├── voice-api/               # Python (Flask) service for voice scoring
-│   ├── app.py
-│   ├── voicepart.py         # Pitch & energy analysis
-│   └── requirements.txt
-│
-├── .env.local.example       # Sample environment config
-├── drizzle.config.ts        # DB schema definition
-├── package.json
-└── README.md
-⚙️ Getting Started
-1. Clone & Install
-bash
-Copy
-Edit
-git clone https://github.com/Nafisa-Shaik786/AI-MOCK-INTERVIEW.git
-cd AI-MOCK-INTERVIEW
-npm install
-2. Set Up Environment Variables
-Create a .env.local file:
+  --Voice-to-text transcription using Whisper and SpeechRecognition.
 
-env
-Copy
-Edit
-GEMINI_API_KEY=your_key
-DATABASE_URL=postgres://...
-VOICE_FEEDBACK_API=https://interview-linkedin-project-ml-part-2.onrender.com/evaluate
-3. Run the Dev Server
-bash
-Copy
-Edit
-npm run dev
-📘 How to Use
-Choose a job role, experience level, and tech stack
+Tech Stack
+  --Frontend: Next.js, Tailwind CSS
 
-Answer AI-generated questions (text or voice)
+  --Backend/API: Node.js, Express.js, Gemini API, Flask (Python)
 
-Review your feedback (correctness, communication, confidence)
+  --Database: PostgreSQL (via Drizzle ORM)
 
-Revisit past sessions from your dashboard
+  --AI Models:
+
+  --Gemini for question-answer generation
+
+  --Mixtral (HuggingFace) for feedback scoring
+
+  --Whisper and Librosa for voice analysis
+
+How to Use
+  --Select your desired job role, experience level, and tech stack.
+
+  --Start the mock interview with AI-generated questions.
+
+  --Respond using either text input or voice input.
+
+  --Receive detailed feedback based on correctness, communication, and confidence.
+
+  --Visit the dashboard to review your past interview sessions.
+
+
+
+
+
+
+
+
+
+
+
+
 
