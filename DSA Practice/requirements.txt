@@ -1,4 +1,0 @@
-fastapi
-uvicorn
-PyPDF2
-requests
